@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    text-align:center;
+    align-items:center;
+}
+
+
+
+li a {
+    display: block;
+    color: lightblue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float:left;
+}
+
+li a:hover {
+    background-color: #111;
+}
+#Header{
+    text-align:center;
+    background-color:lightblue;
+    color:#333;
+    font-family:Tahoma;
+    align-items:center;
+    margin: auto;
+}
+#footer{
+    background-color: #333;
+    color: lightblue;
+    align-items:center;
+    font-family:Tahoma;
+    height: 50px; 
+    width:100%;
+    //position: absolute;
+    left: 0;
+    bottom: 0; 
+    margin: auto;
+}
+
+h1{
+    margin: auto;
+    text-align:center;
+}
+</style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div id="Header">
+        <h1>Furniture</h1>
+         <ul>
+         <li><a href="#home">Home</a></li>
+          <li><a href="ShowProducts.aspx">Products</a></li>
+          <li><a href="Payment.aspx">Payment</a></li>
+          <li><a href="#about">About</a></li>
+             <li><a href="form.aspx">Form</a></li>
+            </ul>
+            </div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <div id="footer">
+        <h1>Ziv Matzner</h1>
+            </div>
+    </div>
+    </form>
+</body>
+</html>
